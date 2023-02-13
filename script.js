@@ -20,10 +20,10 @@ const getData = async (event) =>{
         alert("please enter city name")
         return;
     }
-   const city = input.value;
+    let city = input.value;
 
    const fetchData = await fetch(
-    `http://api.weatherapi.com/v1/current.json?key=a2335d7d0c3e4bfea26142935231202&q=${city}`
+    `https://api.weatherapi.com/v1/forecast.json?key=a2335d7d0c3e4bfea26142935231202&q=${city}`
    );
    
    const orgData = await fetchData.json();
